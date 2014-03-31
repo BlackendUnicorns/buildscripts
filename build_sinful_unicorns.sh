@@ -27,13 +27,13 @@ VERSION=`date +%Y%m%d`
 # get time of startup
 res1=$(date +%s.%N)
 
-echo -e "${cya}Building ${bldcya}Vanilla RootBox Nightly-$VERSION ${txtrst}";
+echo -e "${cya}Building ${bldcya}Vanilla Sinful Unicorns Nightly-$VERSION ${txtrst}";
 
 # sync with latest sources
 echo -e ""
 if [ "$SYNC" == "sync" ]
 then
-   echo -e "${bldblu}Syncing latest RootBox sources ${txtrst}"
+   echo -e "${bldblu}Syncing latest Sinful Unicorns sources ${txtrst}"
    repo sync -j"$THREADS"
    echo -e ""
 fi
@@ -49,13 +49,13 @@ echo -e "${bldblu}Setting up build environment ${txtrst}"
 # lunch device
 echo -e ""
 echo -e "${bldblu}Lunching your device ${txtrst}"
-lunch "rootbox_$DEVICE-userdebug";
+lunch "sinful_$DEVICE-userdebug";
 
 echo -e ""
-echo -e "${bldblu}Starting to build RootBox ${txtrst}"
+echo -e "${bldblu}Starting to build Sinful Unicorns ${txtrst}"
 
 # start compilation
-brunch "rootbox_$DEVICE-userdebug" -j"$THREADS";
+brunch "sinful_$DEVICE-userdebug" -j"$THREADS";
 echo -e ""
 
 # finished? get elapsed time
